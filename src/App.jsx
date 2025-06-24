@@ -5,7 +5,6 @@ import Layout from './Components/Layout/Layout';
 
 function App() {
   const apikey =import.meta.env.VITE_API_KEY?.trim();
-  console.log("api_key:",apikey);
   const [imageUrl, setImageUrl] = useState(null);
   const [loading, setLoading] = useState(false);
 
