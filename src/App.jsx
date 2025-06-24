@@ -42,7 +42,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <BrowserRouter  basename='/Ai_Text_To_Image'>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route
