@@ -21,11 +21,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Set VITE_API_KEY from GitHub Secrets
-        run: echo "VITE_API_KEY=${{ secrets.VITE_API_KEY }}" >> .env
-
-      - name: Build the project
-        run: npm run build
+      - name: Build the project with VITE_API_KEY
+        run: |
+          echo "Building with VITE_API_KEY"
+          VITE_API_KEY=${{ secrets.VITE_API_KEY }} npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
